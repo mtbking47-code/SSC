@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Shawarma Snack Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Mulish:wght@400;600;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg ssc-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="images/logo-circle.png" alt="SSC logo" height="42" style="border-radius:50%;">Shawarma Snack Center</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sscNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="sscNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="menu.html" id="menuDrop" role="button" data-bs-toggle="dropdown">Menu</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDrop">
+            <li><a class="dropdown-item" href="menu.html#rice-meals">Rice Meals</a></li>
+            <li><a class="dropdown-item" href="menu.html#wraps">Wraps</a></li>
+            <li><a class="dropdown-item" href="menu.html#sides">Sides &amp; Drinks</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding:3rem 1rem;">
+  <h1 style="font-size:2.2rem;">About Shawarma Snack Center</h1>
+  <p class="tagline">A small business, one skewer at a time.</p>
+</header>
+
+<section>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <h2 class="section-title">Our Story</h2>
+        <p>Shawarma Snack Center started as a single street cart before growing into a
+        neighborhood favorite. Every recipe on our menu, from the garlic sauce to the spice
+        rub on our skewers, is still made the same way it was on day one.</p>
+        <p>We keep things simple: fresh ingredients, fast service, and a menu that doesn't
+        change just because it's already good.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="images/logo-full.png" class="img-fluid rounded shadow p-4 bg-white" alt="Shawarma Snack Center logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container text-center">
+    <h2 class="section-title">Our Storefront <small class="d-block fs-6 text-muted">(hover the photo to explore &mdash; image map)</small></h2>
+    <div class="imagemap-wrap">
+      <img src="images/storefront.svg" alt="SSC storefront with clickable hotspots" usemap="#storefrontMap">
+      <span class="hotspot-hint" id="hotspotHint" style="display:none;"></span>
+    </div>
+    <map name="storefrontMap">
+      <area shape="rect" coords="20,20,300,280" href="menu.html" data-label="Order Counter &rarr; View Menu" alt="Order counter">
+      <area shape="rect" coords="320,20,600,280" href="gallery.html" data-label="Open Kitchen &rarr; See Gallery" alt="Open kitchen">
+      <area shape="rect" coords="620,20,880,280" href="contact.html" data-label="Seating Area &rarr; Contact Us" alt="Seating area">
+      <area shape="circle" coords="450,450,120" href="about.html#story" data-label="Signage &rarr; Our Story" alt="SSC signage">
+    </map>
+    <p class="text-muted small mt-3">Click any hotspot on the photo above to jump to that section of the site.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title text-center d-block">Find Us</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-ssc">
+          <h3 style="font-size:1.1rem;">Main Branch</h3>
+          <p>123 Kalayaan Ave, Paranaque City<br>Open daily 10 AM&ndash;10 PM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-ssc">
+          <h3 style="font-size:1.1rem;">Mall Kiosk</h3>
+          <p>2nd Floor, SM Sucat<br>Open daily 10 AM&ndash;9 PM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-ssc">
+          <h3 style="font-size:1.1rem;">Food Park Stall</h3>
+          <p>BF Homes Food Park<br>Open Wed&ndash;Mon, 4 PM&ndash;12 MN</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h4 style="color:#F5B324;">SSC</h4>
+        <p>Shawarma Snack Center &mdash; grilled fresh, wrapped fast, made with a family recipe served since day one.</p>
+      </div>
+      <div class="col-md-4">
+        <h4 style="font-size:1rem;">Site Map</h4>
+        <ul class="sitemap-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4 style="font-size:1rem;">Visit Us</h4>
+        <p>123 Kalayaan Ave, Paranaque City<br>Open daily, 10 AM &ndash; 10 PM<br>We Deliver: 8521-2121</p>
+      </div>
+    </div>
+    <div class="developer-credit">
+      Developed by <strong>[Your Name Here]</strong> &mdash; IT130L Web Design &amp; Development Project
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

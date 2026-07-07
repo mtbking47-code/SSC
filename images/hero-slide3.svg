@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B7A3A"/>
+      <stop offset="100%" stop-color="#3d4620"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#g)"/>
+  <circle cx="738.0" cy="120.0" r="90" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="108.0" cy="510.0" r="130" fill="rgba(0,0,0,0.08)"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="54" font-weight="700"
+        fill="#ffffff" text-anchor="middle" dominant-baseline="middle" opacity="0.95">Family Recipe Since Day One</text>
+</svg>

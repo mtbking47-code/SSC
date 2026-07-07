@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Shawarma Snack Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Mulish:wght@400;600;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg ssc-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="images/logo-circle.png" alt="SSC logo" height="42" style="border-radius:50%;">Shawarma Snack Center</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sscNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="sscNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="menu.html" id="menuDrop" role="button" data-bs-toggle="dropdown">Menu</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDrop">
+            <li><a class="dropdown-item" href="menu.html#rice-meals">Rice Meals</a></li>
+            <li><a class="dropdown-item" href="menu.html#wraps">Wraps</a></li>
+            <li><a class="dropdown-item" href="menu.html#sides">Sides &amp; Drinks</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding:3rem 1rem;">
+  <h1 style="font-size:2.2rem;">Gallery</h1>
+  <p class="tagline">Click any photo for a closer look.</p>
+</header>
+
+<section>
+  <div class="container">
+    <div class="row g-4">
+      
+      <div class="col-md-4 col-6">
+        <div class="gallery-item" data-full="images/menu-mixed-grill.jpg" data-alt="Mixed Grilled Meat">
+          <img src="images/menu-mixed-grill.jpg" alt="Mixed Grilled Meat">
+          <div class="gallery-caption">Mixed Grilled Meat</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <div class="gallery-item" data-full="images/menu-chicken-tikka.jpg" data-alt="Chicken Tikka Sandwich Meal">
+          <img src="images/menu-chicken-tikka.jpg" alt="Chicken Tikka Sandwich Meal">
+          <div class="gallery-caption">Chicken Tikka Sandwich</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <div class="gallery-item" data-full="images/menu-kebbab.jpg" data-alt="Kebbab Sandwich Meal">
+          <img src="images/menu-kebbab.jpg" alt="Kebbab Sandwich Meal">
+          <div class="gallery-caption">Kebbab Sandwich</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <div class="gallery-item" data-full="images/menu-shawarma-meal.jpg" data-alt="Shawarma Meal">
+          <img src="images/menu-shawarma-meal.jpg" alt="Shawarma Meal">
+          <div class="gallery-caption">Classic Shawarma Meal</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <div class="gallery-item" data-full="images/menu-extra-special.jpg" data-alt="Shawarma Extra Special">
+          <img src="images/menu-extra-special.jpg" alt="Shawarma Extra Special">
+          <div class="gallery-caption">Shawarma Extra Special</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <div class="gallery-item" data-full="images/we-deliver-banner.jpg" data-alt="SSC Spread of Dishes">
+          <img src="images/we-deliver-banner.jpg" alt="SSC Spread of Dishes">
+          <div class="gallery-caption">A Full SSC Spread</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img src="" alt="" id="lightboxImage">
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h4 style="color:#F5B324;">SSC</h4>
+        <p>Shawarma Snack Center &mdash; grilled fresh, wrapped fast, made with a family recipe served since day one.</p>
+      </div>
+      <div class="col-md-4">
+        <h4 style="font-size:1rem;">Site Map</h4>
+        <ul class="sitemap-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4 style="font-size:1rem;">Visit Us</h4>
+        <p>123 Kalayaan Ave, Paranaque City<br>Open daily, 10 AM &ndash; 10 PM<br>We Deliver: 8521-2121</p>
+      </div>
+    </div>
+    <div class="developer-credit">
+      Developed by <strong>[Your Name Here]</strong> &mdash; IT130L Web Design &amp; Development Project
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

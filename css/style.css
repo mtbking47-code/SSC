@@ -1,0 +1,446 @@
+/* ==========================================================================
+   SHAWARMA SNACK CENTER — Design tokens
+   Palette: charcoal #241C15, spice red #C1440E, warm gold #D9A441,
+            olive #6B7A3A, pita cream #F3E9D2
+   Type: 'Oswald' (display/condensed, headings) + 'Mulish' (body/utility)
+   ========================================================================== */
+
+:root {
+  --charcoal: #1a1a1a;      /* menu-photo dark background */
+  --navy: #17225E;          /* SSC logo navy */
+  --spice: #E8391E;         /* SSC logo red (circle badge) */
+  --spice-dark: #b82a13;
+  --gold: #F5B324;          /* SSC logo gold */
+  --olive: #6B7A3A;
+  --cream: #F6F4E4;         /* logo background ivory */
+  --cream-soft: #FBFAF2;
+  --white: #ffffff;
+  --shadow: 0 8px 24px rgba(23, 34, 94, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Mulish', sans-serif;
+  color: var(--navy);
+  background-color: var(--cream-soft);
+  margin: 0;
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+}
+
+a { text-decoration: none; }
+
+/* ---------- CSS3: Navigation bar + Dropdowns ---------- */
+.ssc-navbar {
+  background-color: var(--charcoal);
+  /* CSS3: gradient */
+  background-image: linear-gradient(120deg, var(--charcoal) 55%, var(--navy) 100%);
+  box-shadow: var(--shadow);
+}
+
+.ssc-navbar .navbar-brand {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold) !important;
+  font-size: 1.6rem;
+}
+
+.ssc-navbar .nav-link {
+  color: var(--cream) !important;
+  font-weight: 600;
+  padding: 0.6rem 1rem !important;
+  transition: color 0.2s ease;
+}
+
+.ssc-navbar .nav-link:hover {
+  color: var(--gold) !important;
+}
+
+.ssc-navbar .dropdown-menu {
+  background-color: var(--charcoal);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+}
+
+.ssc-navbar .dropdown-item {
+  color: var(--cream);
+}
+
+.ssc-navbar .dropdown-item:hover {
+  background-color: var(--spice);
+  color: var(--white);
+}
+
+/* ---------- CSS3: Attribute selector ---------- */
+/* Style any external links with a small icon cue, and required fields */
+a[href^="http"]::after {
+  content: " \2197"; /* arrow */
+  font-size: 0.8em;
+}
+
+input[required], textarea[required] {
+  border-left: 4px solid var(--spice);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background-color: var(--charcoal);
+  /* CSS3: multiple backgrounds */
+  background-image:
+    radial-gradient(circle at 15% 30%, rgba(217,164,65,0.15) 0, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(193,68,14,0.25) 0, transparent 50%),
+    linear-gradient(180deg, #0d0d0d 0%, var(--charcoal) 100%);
+  color: var(--cream);
+  padding: 5rem 1rem 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 3rem;
+}
+
+.hero .tagline {
+  color: var(--gold);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Signature element: rotating skewer ---------- */
+.skewer-wrap {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skewer {
+  animation: spin-skewer 6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes spin-skewer {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skewer { animation: none; }
+}
+
+/* ---------- CSS3: Rounded corners, Shadow effects, Opacity, Float ---------- */
+.card-ssc {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-ssc:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(36,28,21,0.3);
+}
+
+.card-ssc .icon-float {
+  float: left;
+  font-size: 2.2rem;
+  margin-right: 0.9rem;
+  color: var(--spice);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--spice);
+  border-radius: 2px;
+}
+
+.overlay-badge {
+  background: rgba(36, 28, 21, 0.75); /* CSS3: rgba color */
+  color: var(--gold);
+  opacity: 0.95;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+section { padding: 4rem 0; }
+.section-alt { background-color: var(--cream); }
+
+/* ---------- CSS3: Border image ---------- */
+.border-image-frame {
+  border: 14px solid transparent;
+  border-image: repeating-linear-gradient(45deg, var(--spice) 0 10px, var(--gold) 10px 20px) 20;
+  padding: 4px;
+}
+
+/* ---------- Menu table ---------- */
+.menu-table th {
+  background-color: var(--charcoal);
+  color: var(--gold);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.menu-table tbody tr:nth-child(odd) {
+  background-color: var(--cream);
+}
+
+.menu-table td, .menu-table th {
+  vertical-align: middle;
+  padding: 0.9rem 1rem;
+}
+
+.price {
+  color: var(--spice-dark);
+  font-weight: 800;
+}
+
+/* ---------- CSS3: Image gallery + lightbox pop-up ---------- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: linear-gradient(0deg, rgba(36,28,21,0.85), transparent);
+  color: var(--white);
+  padding: 0.9rem;
+  font-weight: 700;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(36,28,21,0.92);
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox-overlay.active { display: flex; }
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px; right: 34px;
+  color: var(--cream);
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+/* ---------- Image map hotspots (about page) ---------- */
+.imagemap-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.imagemap-wrap img { max-width: 100%; border-radius: 10px; }
+
+.hotspot-hint {
+  position: absolute;
+  background: rgba(217,164,65,0.9);
+  color: var(--charcoal);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* ---------- CSS3: Forms ---------- */
+.form-ssc label {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.form-ssc .form-control:focus {
+  border-color: var(--spice);
+  box-shadow: 0 0 0 0.2rem rgba(193,68,14,0.25);
+}
+
+.btn-ssc {
+  background-color: var(--spice);
+  border: none;
+  color: var(--white);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.05em;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-ssc:hover { background-color: var(--spice-dark); color: var(--white); }
+
+/* ---------- Footer + site map ---------- */
+footer {
+  background-color: var(--charcoal);
+  color: var(--cream);
+  padding: 2.5rem 0 1.5rem;
+}
+
+footer a { color: var(--gold); }
+footer a:hover { color: var(--white); }
+
+.sitemap-list { list-style: none; padding-left: 0; }
+.sitemap-list li { margin-bottom: 0.4rem; }
+
+.developer-credit {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(243,233,210,0.15);
+  font-size: 0.9rem;
+  color: var(--gold);
+}
+
+/* Bootstrap carousel tweak */
+.carousel-caption {
+  background: rgba(23,34,94,0.55);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+/* ---------- Real SSC promo-card style (menu page) ---------- */
+.script-font {
+  font-family: 'Caveat', cursive;
+}
+
+.promo-card {
+  background-color: var(--charcoal);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 6px);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  color: var(--white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.promo-card .promo-ribbon {
+  background-color: var(--spice);
+  color: var(--white);
+  font-family: 'Caveat', cursive;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  display: inline-block;
+  border-radius: 0 0 10px 0;
+}
+
+.promo-card .promo-body {
+  padding: 1.1rem 1.3rem 1.4rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.promo-card .promo-price {
+  color: var(--gold);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.promo-card .promo-note {
+  color: #d8d8d8;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Delivery banner ---------- */
+.deliver-banner {
+  background-color: var(--charcoal);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.deliver-banner img {
+  width: 100%;
+  display: block;
+  opacity: 0.55;
+}
+
+.deliver-banner .deliver-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.deliver-overlay .deliver-phone {
+  color: var(--gold);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
